@@ -1,16 +1,14 @@
-# Mintlify Starter Kit
+# Mint user guide docs
 
-Use the starter kit to get your docs deployed and ready to customize.
+This repository contains the Mint end-user documentation site built with Mintlify.
 
-Click the green **Use this template** button at the top of this repo to copy the Mintlify starter kit. The starter kit contains examples with
+The published guide covers:
 
-- Guide pages
-- Navigation
-- Customizations
-- API reference pages
-- Use of popular components
-
-**[Follow the full quickstart guide](https://starter.mintlify.com/quickstart)**
+- Getting started with Mint
+- Creating Worlds and 3D Models
+- Exploring, sharing, and going live
+- Managing Credits, billing, and profile settings
+- Troubleshooting and product limits
 
 ## AI-assisted writing
 
@@ -20,9 +18,7 @@ Set up your AI coding tool to work with Mintlify:
 npx skills add https://mintlify.com/docs
 ```
 
-This command installs Mintlify's documentation skill for your configured AI tools like Claude Code, Cursor, Windsurf, and others. The skill includes component reference, writing standards, and workflow guidance.
-
-See the [AI tools guides](/ai-tools) for tool-specific setup.
+This command installs Mintlify's documentation skill for your configured AI tools. The skill includes component reference, writing standards, and workflow guidance.
 
 ## Development
 
@@ -39,6 +35,15 @@ mint dev
 ```
 
 View your local preview at `http://localhost:3000`.
+
+Run `mint broken-links` before you ship navigation or content changes.
+
+## Key files
+
+- `docs.json` for navigation, branding, and site-level configuration
+- `index.mdx` for the Mint user guide landing page
+- Root-level `*.mdx` files for the main guide sections
+- `AGENTS.md` for project-specific writing and terminology rules
 
 ## Publishing changes
 

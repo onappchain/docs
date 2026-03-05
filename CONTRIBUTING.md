@@ -1,8 +1,6 @@
-> **Customize this file**: Tailor this template to your project by noting specific contribution types you're looking for, adding a Code of Conduct, or adjusting the writing guidelines to match your style.
-
 # Contribute to the documentation
 
-Thank you for your interest in contributing to our documentation! This guide will help you get started.
+Thank you for contributing to the Mint user guide. This guide covers the workflow and writing standards for this repo.
 
 ## How to contribute
 
@@ -22,7 +20,7 @@ Thank you for your interest in contributing to our documentation! This guide wil
 6. Preview your changes at `http://localhost:3000`
 7. Commit your changes and submit a pull request
 
-For more details on local development, see our [development guide](development.mdx).
+Run `mint broken-links` before you open a pull request.
 
 ## Writing guidelines
 
@@ -30,5 +28,8 @@ For more details on local development, see our [development guide](development.m
 - **Address the reader directly**: Use "you" instead of "the user"
 - **Keep sentences concise**: Aim for one idea per sentence
 - **Lead with the goal**: Start instructions with what the user wants to accomplish
-- **Use consistent terminology**: Don't alternate between synonyms for the same concept
+- **Use consistent terminology**: Prefer `World`, `3D Model`, `Preview`, `Credits`, `Favorites`, `Profile`, `Account`, and `Live Room`
+- **Use sentence case headings**: Match the guide's page and section style
+- **Bold UI labels**: Write **Create**, **Profile**, and **Go Live**
+- **Preserve access labels**: Keep `**Access:** ...` lines when a page or section has a specific visibility rule
 - **Include examples**: Show, don't just tell
