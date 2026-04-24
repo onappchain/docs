@@ -43,6 +43,13 @@
           "account-profile-and-billing",
           "faq-troubleshooting-and-limitations"
         ]
+      },
+      {
+        "group": "Help and legal",
+        "pages": [
+          "support",
+          "terms-of-service"
+        ]
       }
     ]
   },
