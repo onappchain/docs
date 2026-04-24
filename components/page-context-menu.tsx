@@ -176,18 +176,11 @@ export function PageContextMenu({
     const prompt = buildProviderPrompt(markdown, pageTitle, pageUrl);
     const url =
       typeof provider.url === "function" ? provider.url(prompt) : provider.url;
-    const popup = url && url.startsWith("http") ? window.open("", "_blank") : null;
 
     setStatus(await copyToClipboard(markdown, "Copied page context"));
     setIsOpen(false);
 
     if (!url) {
-      return;
-    }
-
-    if (popup) {
-      popup.opener = null;
-      popup.location.href = url;
       return;
     }
 
