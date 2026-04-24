@@ -4,17 +4,18 @@
   "name": "Mint",
   "description": "End-user documentation for exploring, creating, and sharing with Mint.",
   "colors": {
-    "primary": "#C4F58A",
-    "light": "#D9FFAA",
-    "dark": "#7C9F4A"
+    "primary": "#C4F042",
+    "light": "#50600F",
+    "dark": "#C4F042"
   },
   "appearance": {
-    "default": "light"
+    "default": "system",
+    "strict": false
   },
   "background": {
     "color": {
-      "light": "#F4F3EE",
-      "dark": "#0D0D0C"
+      "light": "#F2EDE8",
+      "dark": "#1C1C1E"
     }
   },
   "fonts": {
@@ -27,10 +28,7 @@
       "weight": 400
     }
   },
-  "favicon": {
-    "light": "/logo/mint-icon-light.svg",
-    "dark": "/logo/mint-icon-dark.svg"
-  },
+  "favicon": "/favicon.svg",
   "navigation": {
     "groups": [
       {
@@ -65,12 +63,21 @@
   "contextual": {
     "options": [
       "copy",
+      "view",
+      "assistant",
       "chatgpt",
       "claude",
       "perplexity",
+      "grok",
+      "aistudio",
+      "devin",
+      "windsurf",
       "mcp",
+      "add-mcp",
       "cursor",
-      "vscode"
-    ]
+      "vscode",
+      "devin-mcp"
+    ],
+    "display": "header"
   }
 }

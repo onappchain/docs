@@ -31,7 +31,7 @@ export type NavGroup = {
   pages: PageMeta[];
 };
 
-type DocsJson = {
+export type DocsJson = {
   name: string;
   description?: string;
   navigation?: {
@@ -115,6 +115,12 @@ export function getNavGroups(): NavGroup[] {
 
 export function getAllPageMeta(): PageMeta[] {
   return getNavGroups().flatMap((group) => group.pages);
+}
+
+export function getAllPages(): Page[] {
+  return getAllPageMeta()
+    .map((page) => getPage(page.slug))
+    .filter((page): page is Page => page !== null);
 }
 
 export function getAdjacentPages(currentSlug: string): {

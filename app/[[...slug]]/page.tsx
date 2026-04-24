@@ -13,6 +13,7 @@ import {
   getPage,
   slugFromSegments,
 } from "@/lib/docs";
+import { getPageMarkdown } from "@/lib/markdown";
 
 type PageProps = {
   params: Promise<{
@@ -73,6 +74,7 @@ export default async function Page({ params }: PageProps) {
       headings={page.headings}
       navGroups={getNavGroups()}
       nextPage={adjacentPages.next}
+      pageMarkdown={getPageMarkdown(page)}
       previousPage={adjacentPages.previous}
     >
       {content}

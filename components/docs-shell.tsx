@@ -2,7 +2,10 @@ import type { ReactNode } from "react";
 import Link from "next/link";
 import { ArrowLeft, ArrowRight, Menu } from "lucide-react";
 
+import { PageContextMenu } from "@/components/page-context-menu";
+import { ThemeSwitch } from "@/components/theme-switch";
 import type { Heading, NavGroup, PageMeta } from "@/lib/docs";
+import { markdownPathForSlug, sourceUrlForSlug } from "@/lib/markdown";
 
 type DocsShellProps = {
   children: ReactNode;
@@ -10,6 +13,7 @@ type DocsShellProps = {
   currentGroup: string | null;
   headings: Heading[];
   navGroups: NavGroup[];
+  pageMarkdown: string;
   previousPage: PageMeta | null;
   nextPage: PageMeta | null;
 };
@@ -20,6 +24,7 @@ export function DocsShell({
   currentGroup,
   headings,
   navGroups,
+  pageMarkdown,
   previousPage,
   nextPage,
 }: DocsShellProps) {
@@ -27,15 +32,29 @@ export function DocsShell({
     <div className="site-shell">
       <header className="topbar">
         <Link href="/" className="brand-link" aria-label="Mint docs home">
-          <img src="/logo/mint-wordmark-light.svg" alt="Mint" />
-          <span>Docs</span>
+          <span className="brand-logo-frame" aria-hidden="true">
+            <img
+              className="brand-logo brand-logo-light"
+              src="/logo/mint-wordmark-light.svg"
+              alt=""
+            />
+            <img
+              className="brand-logo brand-logo-dark"
+              src="/logo/mint-wordmark-dark.svg"
+              alt=""
+            />
+          </span>
+          <span className="brand-label">Docs</span>
         </Link>
 
-        <nav className="topbar-nav" aria-label="Primary">
-          <Link href="/getting-started">Getting started</Link>
-          <Link href="/create-worlds-and-3d-models">Create</Link>
-          <Link href="/support">Support</Link>
-        </nav>
+        <div className="topbar-actions">
+          <nav className="topbar-nav" aria-label="Primary">
+            <Link href="/getting-started">Getting started</Link>
+            <Link href="/create-worlds-and-3d-models">Create</Link>
+            <Link href="/support">Support</Link>
+          </nav>
+          <ThemeSwitch />
+        </div>
       </header>
 
       <details className="mobile-nav">
@@ -60,8 +79,18 @@ export function DocsShell({
 
         <main className="main-content">
           <article className="doc-article">
-            <p className="doc-eyebrow">{currentGroup ?? "Guide"}</p>
-            <h1>{currentPage.title}</h1>
+            <div className="doc-header">
+              <div className="doc-title-block">
+                <p className="doc-eyebrow">{currentGroup ?? "Guide"}</p>
+                <h1>{currentPage.title}</h1>
+              </div>
+              <PageContextMenu
+                markdown={pageMarkdown}
+                markdownUrl={markdownPathForSlug(currentPage.slug)}
+                pageTitle={currentPage.title}
+                pageUrl={sourceUrlForSlug(currentPage.slug)}
+              />
+            </div>
             {currentPage.description ? (
               <p className="doc-description">{currentPage.description}</p>
             ) : null}

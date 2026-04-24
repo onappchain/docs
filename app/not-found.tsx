@@ -20,6 +20,7 @@ export default function NotFound() {
       headings={[]}
       navGroups={getNavGroups()}
       nextPage={null}
+      pageMarkdown={`# ${notFoundPage.title}\n\n> ${notFoundPage.description}\n\nSource: https://docs.mint.gg/404\n\nCheck the navigation or return to the Mint user guide overview.\n`}
       previousPage={null}
     >
       <p>
