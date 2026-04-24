@@ -5,3 +5,14 @@
 # Draft content
 drafts/
 *.draft.mdx
+
+# Standalone Vercel app shell
+app/
+components/
+lib/
+public/
+next-env.d.ts
+next.config.mjs
+package-lock.json
+package.json
+tsconfig.json

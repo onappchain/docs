@@ -1,11 +1,12 @@
 ---
 title: "Create worlds and 3D models"
-description: "Use prompts, images, Street View links, and listing links to generate Worlds and 3D Models in Mint."
+description: "Choose the right Mint creation flow for Worlds, 3D Models, web Chat, generation settings, and mobile capture."
 ---
 
 **Access:** Signed in
 
-The **Create** page is where you turn ideas into 3D content.
+Mint has two main creation paths: web Chat for prompt-based creation and the
+mobile app for camera-based capture.
 
 ## Key concepts
 
@@ -14,157 +15,93 @@ The **Create** page is where you turn ideas into 3D content.
 - **World**: A 3D space you can walk through, share, and use for live sessions.
 - **3D Model**: A single object or character you can view and download as a GLB file.
 - **Preview**: The image Mint shows before final generation starts.
-- **Remix**: Starting a new World from an existing World's current look.
-- **Credits**: The currency Mint uses for generation.
+- **Credits**: Mint's generation currency.
+- **Remix**: Starting from an existing World or asset instead of a blank prompt.
 
-Mint uses a Preview-first flow. You review the Preview, then choose whether to start final generation.
+Mint uses a Preview-first flow. Review the Preview before you spend more Credits
+on final generation.
 
-## Credits at a glance
-
-**Access:** Signed in
-
-- Creating content uses Credits or, if available on your account, an optional subscription quota.
-- Eligible new users may receive a limited number of free previews.
-- Final generation costs more than a Preview.
-- You can buy more Credits from **Account**.
-
-Keep exact costs in the product UI as your source of truth when you are about to generate.
-
-## Choose a mode
+## Choose a creation path
 
 **Access:** Signed in
 
-At the top of **Create**, choose:
+<Columns cols={2}>
+  <Card
+    title="Create with Chat"
+    icon="message-square"
+    href="/create-with-chat"
+  >
+    Create Worlds and 3D Models from prompts, images, Street View links, listing links, templates, and follow-up edits.
+  </Card>
+  <Card
+    title="Use generation settings"
+    icon="settings-2"
+    href="/generation-settings"
+  >
+    Choose presets, use Custom settings carefully, and understand billing or quota messages in Chat.
+  </Card>
+  <Card
+    title="Capture with the mobile app"
+    icon="camera"
+    href="/mobile-capture"
+  >
+    Scan rooms, objects, and people with the Mint mobile app.
+  </Card>
+  <Card
+    title="Plans, Credits, and billing"
+    icon="wallet"
+    href="/plans-credits-and-billing"
+  >
+    Understand Credits, plans, top-ups, redemption codes, referrals, and billing recovery.
+  </Card>
+</Columns>
 
-- **World**
-- **3D Model**
-
-Pick **World** if you want a walkable scene. Pick **3D Model** if you want a single object or character.
-
-## Create a World from text
+## Create on the web
 
 **Access:** Signed in
 
-1. Open **Create**.
-2. Select **World**.
-3. Type a descriptive prompt.
-4. Press the submit button.
-5. Wait for the Preview.
-6. Review the Preview.
-7. Click **Edit** if you want changes, or **Start 3D Generation** if it looks right.
+Use [Create with Chat](/create-with-chat) when you want to:
+
+- Start from a text prompt.
+- Upload or paste images.
+- Paste a Street View or supported listing link.
+- Start from a template.
+- Edit a Preview with follow-up instructions.
+- Reuse a generated asset as context.
 
 Example:
 
 ```text
-A cozy mountain cabin at sunset with warm lights, pine trees, and light fog
+Create a cozy mountain cabin at sunset with warm lights, pine trees, and light fog.
 ```
 
-Tip: short one-word prompts are usually not enough. Be specific about place, lighting, mood, and scale.
-
-## Create a World from images
+## Capture on mobile
 
 **Access:** Signed in
 
-You can guide a World with your own reference images.
+Use [Capture with the Mint mobile app](/mobile-capture) when you want to:
 
-1. Select **World**.
-2. Upload an image or paste an image URL.
-3. Add more images if needed, up to `8`.
-4. Choose the main reference image if you added more than one.
-5. Submit and wait for the Preview.
-6. Edit the Preview or start final generation.
+- Scan a room with guided photos.
+- Scan a room with a 360 video sweep.
+- Scan one object for a 3D Model.
+- Scan one person for a 3D Model.
 
-Use this when you want Mint to stay closer to a real place, style, or layout.
+Mobile captures appear in **My Models** in the mobile app and can also appear on
+your web **Profile** when you use the same Mint account.
 
-## Create a World from a Street View link
-
-**Access:** Signed in
-
-Mint can turn a Street View link into a World starting point.
-
-1. Copy a Google Maps or Street View link.
-2. Paste it into the **Create** prompt area while **World** is selected.
-3. Wait while Mint captures the panorama.
-4. Review the Preview.
-5. Click **Edit** or **Start 3D Generation**.
-
-Example:
-
-```text
-Paste a Street View link for a scenic overlook, then edit the preview with:
-Make the sky warmer and add more dramatic clouds
-```
-
-## Create a World from a listing link
+## Review before final generation
 
 **Access:** Signed in
 
-Mint also supports some property listing links.
+Before final generation:
 
-1. Copy a supported `Zillow`, `Airbnb`, or `Redfin` link.
-2. Paste it into the **Create** prompt area while **World** is selected.
-3. Wait for Mint to pull the listing photos.
-4. In the photo picker, choose one or more images.
-5. Set a **MAIN** image if needed.
-6. Click **Use Selected Photos**.
-7. Review the Preview and continue.
+1. Review the Preview.
+2. Click **Edit** if the image needs changes.
+3. Continue editing until the idea is clear.
+4. Click **Generate World** or **Generate 3D Model** when ready.
 
-Example:
-
-```text
-Choose one front-facing photo as the main image, then add two supporting photos with matching lighting.
-```
-
-## Edit a Preview before final generation
-
-**Access:** Signed in
-
-Both Worlds and 3D Models let you revise the Preview before you spend more on the final result.
-
-1. Wait for the Preview to appear.
-2. Click **Edit**.
-3. Describe what should change.
-4. Wait for the updated Preview.
-5. Repeat if needed.
-6. Click **Start 3D Generation** when ready.
-
-Good edit example:
-
-```text
-Make the lighting warmer, add more trees, and open the space around the cabin
-```
-
-## Remix an existing World
-
-**Access:** Signed in
-
-Use remix when you want to build from a World that already exists.
-
-1. Open the World you want to build from.
-2. Click **Edit World**.
-3. Mint opens **Create** with that World as the starting point.
-4. Change the Preview with **Edit**.
-5. Start final generation when the result matches your goal.
-
-This is the standard user editing flow for existing Worlds.
-
-## Create a 3D Model
-
-**Access:** Signed in
-
-1. Open **Create**.
-2. Select **3D Model**.
-3. Enter a prompt or upload one image.
-4. Wait for the square Preview.
-5. Click **Edit** to refine it, or **Start 3D Generation** to continue.
-6. Wait for the model to finish.
-7. Open it from your **Profile** under **3D Models**.
-
-Example:
-
-```text
-A stylized red scooter with chrome trim and clean studio lighting
-```
+If Mint shows a Credits, plan, or quota message, resolve it before trying again.
+The current Mint UI is the source of truth for costs and availability.
 
 ## Where finished content appears
 
@@ -174,20 +111,10 @@ After generation:
 
 - Finished Worlds appear in your **Profile** under **Worlds**.
 - Finished 3D Models appear in your **Profile** under **3D Models**.
-- Failed or cancelled items with a usable Preview appear in **Previews**.
+- Mobile-created items appear in **My Models** in the mobile app.
+- Failed or cancelled items with a usable Preview can appear in **Previews**.
 
-Worlds can be opened and shared. 3D Models can be viewed in full screen and downloaded as GLB files.
+Worlds can be opened and shared. 3D Models can be viewed and downloaded as GLB
+files when a download is available.
 
-## Useful limits
-
-**Access:** Signed in
-
-- Image upload size: `5 MB` max per file
-- World reference images: up to `8`
-- 3D Model reference images: `1`
-- Concurrent World generations: up to `10`
-- Concurrent 3D Model generations: up to `10`
-
-If you hit a limit, wait for current jobs to finish or continue from your **Profile** later.
-
-Next step: [Explore, share, and go live](/explore-share-and-go-live)
+Next step: [Create with Chat](/create-with-chat)
